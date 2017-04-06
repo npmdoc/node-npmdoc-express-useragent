@@ -1,0 +1,1591 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/biggora/express-useragent/"
+
+    >express-useragent (v1.0.7)</a>
+</h1>
+<h4>ExpressJS/Connect/TrinteJS user-agent middleware exposing</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-useragent">module express-useragent</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-useragent.UserAgent">
+            function <span class="apidocSignatureSpan">express-useragent.</span>UserAgent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-useragent.express">
+            function <span class="apidocSignatureSpan">express-useragent.</span>express
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-useragent.getBrowser">
+            function <span class="apidocSignatureSpan">express-useragent.</span>getBrowser
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-useragent.getBrowserVersion">
+            function <span class="apidocSignatureSpan">express-useragent.</span>getBrowserVersion
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-useragent.getOS">
+            function <span class="apidocSignatureSpan">express-useragent.</span>getOS
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-useragent.getPlatform">
+            function <span class="apidocSignatureSpan">express-useragent.</span>getPlatform
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-useragent.parse">
+            function <span class="apidocSignatureSpan">express-useragent.</span>parse
+            <span class="apidocSignatureSpan">(source)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-useragent.reset">
+            function <span class="apidocSignatureSpan">express-useragent.</span>reset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-useragent.testAndroidTablet">
+            function <span class="apidocSignatureSpan">express-useragent.</span>testAndroidTablet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-useragent.testBot">
+            function <span class="apidocSignatureSpan">express-useragent.</span>testBot
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-useragent.testCaptiveNetwork">
+            function <span class="apidocSignatureSpan">express-useragent.</span>testCaptiveNetwork
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-useragent.testCompatibilityMode">
+            function <span class="apidocSignatureSpan">express-useragent.</span>testCompatibilityMode
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-useragent.testKindleFire">
+            function <span class="apidocSignatureSpan">express-useragent.</span>testKindleFire
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-useragent.testMobile">
+            function <span class="apidocSignatureSpan">express-useragent.</span>testMobile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-useragent.testNginxGeoIP">
+            function <span class="apidocSignatureSpan">express-useragent.</span>testNginxGeoIP
+            <span class="apidocSignatureSpan">(headers)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-useragent.testSilk">
+            function <span class="apidocSignatureSpan">express-useragent.</span>testSilk
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-useragent.testSmartTV">
+            function <span class="apidocSignatureSpan">express-useragent.</span>testSmartTV
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-useragent.testTablet">
+            function <span class="apidocSignatureSpan">express-useragent.</span>testTablet
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-useragent.</span>Agent</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-useragent.</span>DefaultAgent</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-useragent.</span>_Browsers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-useragent.</span>_OS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-useragent.</span>_Platform</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-useragent.</span>_Versions</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">express-useragent.</span>express_useragent</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">express-useragent.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.express-useragent.express_useragent">module express-useragent.express_useragent</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.express-useragent.express_useragent.UserAgent">
+            function <span class="apidocSignatureSpan">express-useragent.express_useragent.</span>UserAgent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-useragent" id="apidoc.module.express-useragent">module express-useragent</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-useragent.UserAgent" id="apidoc.element.express-useragent.UserAgent">
+        function <span class="apidocSignatureSpan">express-useragent.</span>UserAgent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">UserAgent = function () {
+    this.version = &#x27;1.0.4&#x27;;
+    this._Versions = {
+        Edge: /Edge\/([\d\w\.\-]+)/i,
+        Firefox: /firefox\/([\d\w\.\-]+)/i,
+        IE: /msie\s([\d\.]+[\d])|trident\/\d+\.\d+;.*[rv:]+(\d+\.\d)/i,
+        Chrome: /chrome\/([\d\w\.\-]+)/i,
+        Chromium: /(?:chromium|crios)\/([\d\w\.\-]+)/i,
+        Safari: /version\/([\d\w\.\-]+)/i,
+        Opera: /version\/([\d\w\.\-]+)|OPR\/([\d\w\.\-]+)/i,
+        Ps3: /([\d\w\.\-]+)\)\s*$/i,
+        Psp: /([\d\w\.\-]+)\)?\s*$/i,
+        Amaya: /amaya\/([\d\w\.\-]+)/i,
+        SeaMonkey: /seamonkey\/([\d\w\.\-]+)/i,
+        OmniWeb: /omniweb\/v([\d\w\.\-]+)/i,
+        Flock: /flock\/([\d\w\.\-]+)/i,
+        Epiphany: /epiphany\/([\d\w\.\-]+)/i,
+        WinJs: /msapphost\/([\d\w\.\-]+)/i,
+        PhantomJS: /phantomjs\/([\d\w\.\-]+)/i,
+        UC: /UCBrowser\/([\d\w\.]+)/i
+    };
+    this._Browsers = {
+        Edge: /edge/i,
+        Amaya: /amaya/i,
+        Konqueror: /konqueror/i,
+        Epiphany: /epiphany/i,
+        SeaMonkey: /seamonkey/i,
+        Flock: /flock/i,
+        OmniWeb: /omniweb/i,
+        Chromium: /chromium|crios/i,
+        Chrome: /chrome/i,
+        Safari: /safari/i,
+        IE: /msie|trident/i,
+        Opera: /opera|OPR/i,
+        PS3: /playstation 3/i,
+        PSP: /playstation portable/i,
+        Firefox: /firefox/i,
+        WinJs: /msapphost/i,
+        PhantomJS: /phantomjs/i,
+        UC: /UCBrowser/i
+    };
+    this._OS = {
+        Windows10: /windows nt 10\.0/i,
+        Windows81: /windows nt 6\.3/i,
+        Windows8: /windows nt 6\.2/i,
+        Windows7: /windows nt 6\.1/i,
+        UnknownWindows: /windows nt 6\.\d+/i,
+        WindowsVista: /windows nt 6\.0/i,
+        Windows2003: /windows nt 5\.2/i,
+        WindowsXP: /windows nt 5\.1/i,
+        Windows2000: /windows nt 5\.0/i,
+        WindowsPhone81: /windows phone 8\.1/i,
+        WindowsPhone80: /windows phone 8\.0/i,
+        OSXCheetah: /os x 10[._]0/i,
+        OSXPuma: /os x 10[._]1(\D|$)/i,
+        OSXJaguar: /os x 10[._]2/i,
+        OSXPanther: /os x 10[._]3/i,
+        OSXTiger: /os x 10[._]4/i,
+        OSXLeopard: /os x 10[._]5/i,
+        OSXSnowLeopard: /os x 10[._]6/i,
+        OSXLion: /os x 10[._]7/i,
+        OSXMountainLion: /os x 10[._]8/i,
+        OSXMavericks: /os x 10[._]9/i,
+        OSXYosemite: /os x 10[._]10/i,
+        OSXElCapitan: /os x 10[._]11/i,
+        OSXSierra: /os x 10[._]12/i,
+        Mac: /os x/i,
+        Linux: /linux/i,
+        Linux64: /linux x86\_64/i,
+        ChromeOS: /cros/i,
+        Wii: /wii/i,
+        PS3: /playstation 3/i,
+        PSP: /playstation portable/i,
+        iPad: /\(iPad.*os (\d+)[._](\d+)/i,
+        iPhone: /\(iPhone.*os (\d+)[._](\d+)/i,
+        Bada: /Bada\/(\d+)\.(\d+)/i,
+        Curl: /curl\/(\d+)\.(\d+)\.(\d+)/i
+    };
+    this._Platform = {
+        Windows: /windows nt/i,
+        WindowsPhone: /windows phone/i,
+        Mac: /macintosh/i,
+        Linux: /linux/i,
+        Wii: /wii/i,
+        Playstation: /playstation/i,
+        iPad: /ipad/i,
+        iPod: /ipod/i,
+        iPhone: /iphone/i,
+        Android: /android/i,
+        Blackberry: /blackberry/i,
+        Samsung: /samsung/i,
+        Curl: /curl/i
+    };
+
+    this.DefaultAgent = {
+        isAuthoritative: true,
+        isMobile: false,
+        isTablet: false,
+        isiPad: false,
+        isiPod: false,
+        isiPhone: false,
+        isAndroid: false,
+        isBlackberry: false,
+        isOpera: false,
+        isIE: false,
+        isEdge: false,
+        isIECompatibilityMode: false,
+        isSafari: false,
+        isFirefox: false,
+        isWebkit: false,
+        isChrome: false,
+        isKonqueror: false,
+        isOmniWeb: false,
+        isSeaMonkey: false,
+        isFlock: false,
+        isAmaya: false,
+        isPhantomJS: false,
+        isEpiphany: false,
+        isDesktop: false,
+        isWindows: false,
+        isLinux: false,
+        isLinux64: false,
+        isMac: false,
+        isChromeOS: false,
+        isBada: false,
+        isSamsung: false,
+        isRaspberry: false,
+        isBot: false,
+        isCurl: false,
+        isAndroidTablet: false, ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-useragent.express" id="apidoc.element.express-useragent.express">
+        function <span class="apidocSignatureSpan">express-useragent.</span>express
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">express = function () {
+    return function (req, res, next) {
+        var source = req.headers[&#x27;user-agent&#x27;] || &#x27;&#x27;;
+        if (req.headers[&#x27;x-ucbrowser-ua&#x27;]) {  //special case of UC Browser
+            source = req.headers[&#x27;x-ucbrowser-ua&#x27;];
+        }
+        var ua = new UserAgent();
+        if (typeof source === &#x27;undefined&#x27;) {
+            source = &#x22;unknown&#x22;;
+        }
+        ua.Agent.source = source.replace(/^\s*/, &#x27;&#x27;).replace(/\s*$/, &#x27;&#x27;);
+        ua.Agent.os = ua.getOS(ua.Agent.source);
+        ua.Agent.platform = ua.getPlatform(ua.Agent.source);
+        ua.Agent.browser = ua.getBrowser(ua.Agent.source);
+        ua.Agent.version = ua.getBrowserVersion(ua.Agent.source);
+        ua.testNginxGeoIP(req.headers);
+        ua.testBot();
+        ua.testMobile();
+        ua.testAndroidTablet();
+        ua.testTablet();
+        ua.testCompatibilityMode();
+        ua.testSilk();
+        ua.testKindleFire();
+        req.useragent = ua.Agent;
+        if (&#x27;function&#x27; === typeof res.locals) {
+            res.locals({useragent: ua.Agent});
+        } else {
+            res.locals.useragent = ua.Agent;
+        }
+        next();
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+#### manual setup in project config/middleware.js
+
+```js
+var useragent = require(&#x27;express-useragent&#x27;);
+
+module.exports = function (app, express) {
+    app.use(function () {
+        app.use(useragent.<span class="apidocCodeKeywordSpan">express</span>());
+    });
+};
+```
+
+### for [ExpressJS](http://expressjs.com/)
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-useragent.getBrowser" id="apidoc.element.express-useragent.getBrowser">
+        function <span class="apidocSignatureSpan">express-useragent.</span>getBrowser
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBrowser = function (string) {
+    switch (true) {
+        case this._Browsers.Edge.test(string):
+            this.Agent.isEdge = true;
+            return &#x27;Edge&#x27;;
+        case this._Browsers.PhantomJS.test(string):
+            this.Agent.isPhantomJS = true;
+            return &#x27;PhantomJS&#x27;;
+        case this._Browsers.Konqueror.test(string):
+            this.Agent.isKonqueror = true;
+            return &#x27;Konqueror&#x27;;
+        case this._Browsers.Amaya.test(string):
+            this.Agent.isAmaya = true;
+            return &#x27;Amaya&#x27;;
+        case this._Browsers.Epiphany.test(string):
+            this.Agent.isEpiphany = true;
+            return &#x27;Epiphany&#x27;;
+        case this._Browsers.SeaMonkey.test(string):
+            this.Agent.isSeaMonkey = true;
+            return &#x27;SeaMonkey&#x27;;
+        case this._Browsers.Flock.test(string):
+            this.Agent.isFlock = true;
+            return &#x27;Flock&#x27;;
+        case this._Browsers.OmniWeb.test(string):
+            this.Agent.isOmniWeb = true;
+            return &#x27;OmniWeb&#x27;;
+        case this._Browsers.Opera.test(string):
+            this.Agent.isOpera = true;
+            return &#x27;Opera&#x27;;
+        case this._Browsers.Chromium.test(string):
+            this.Agent.isChrome = true;
+            return &#x27;Chromium&#x27;;
+        case this._Browsers.Chrome.test(string):
+            this.Agent.isChrome = true;
+            return &#x27;Chrome&#x27;;
+        case this._Browsers.WinJs.test(string):
+            this.Agent.isWinJs = true;
+            return &#x27;WinJs&#x27;;
+        case this._Browsers.IE.test(string):
+            this.Agent.isIE = true;
+            return &#x27;IE&#x27;;
+        case this._Browsers.Safari.test(string):
+            this.Agent.isSafari = true;
+            return &#x27;Safari&#x27;;
+        case this._Browsers.PS3.test(string):
+            return &#x27;ps3&#x27;;
+        case this._Browsers.PSP.test(string):
+            return &#x27;psp&#x27;;
+        case this._Browsers.Firefox.test(string):
+            this.Agent.isFirefox = true;
+            return &#x27;Firefox&#x27;;
+        case this._Browsers.UC.test(string):
+            this.Agent.isUC = true;
+            return &#x27;UCBrowser&#x27;;
+        default:
+            // If the UA does not start with Mozilla guess the user agent.
+            if (string.indexOf(&#x27;Mozilla&#x27;) !== 0 &#x26;&#x26; /^([\d\w\-\.]+)\/[\d\w\.\-]+/i.test(string)) {
+                this.Agent.isAuthoritative = false;
+                return RegExp.$1;
+            }
+            return &#x27;unknown&#x27;;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var ua = new UserAgent();
+if (typeof source === &#x27;undefined&#x27;) {
+    source = &#x22;unknown&#x22;;
+}
+ua.Agent.source = source.replace(/^\s*/, &#x27;&#x27;).replace(/\s*$/, &#x27;&#x27;);
+ua.Agent.os = ua.getOS(ua.Agent.source);
+ua.Agent.platform = ua.getPlatform(ua.Agent.source);
+ua.Agent.browser = ua.<span class="apidocCodeKeywordSpan">getBrowser</span>(ua.Agent.source);
+ua.Agent.version = ua.getBrowserVersion(ua.Agent.source);
+ua.testNginxGeoIP(req.headers);
+ua.testBot();
+ua.testMobile();
+ua.testAndroidTablet();
+ua.testTablet();
+ua.testCompatibilityMode();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-useragent.getBrowserVersion" id="apidoc.element.express-useragent.getBrowserVersion">
+        function <span class="apidocSignatureSpan">express-useragent.</span>getBrowserVersion
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getBrowserVersion = function (string) {
+    var regex;
+    switch (this.Agent.browser) {
+        case &#x27;Edge&#x27;:
+            if (this._Versions.Edge.test(string)) {
+                return RegExp.$1;
+            }
+            break;
+        case &#x27;PhantomJS&#x27;:
+            if (this._Versions.PhantomJS.test(string)) {
+                return RegExp.$1;
+            }
+            break;
+        case &#x27;Chrome&#x27;:
+            if (this._Versions.Chrome.test(string)) {
+                return RegExp.$1;
+            }
+            break;
+        case &#x27;Chromium&#x27;:
+            if (this._Versions.Chromium.test(string)) {
+                return RegExp.$1;
+            }
+            break;
+        case &#x27;Safari&#x27;:
+            if (this._Versions.Safari.test(string)) {
+                return RegExp.$1;
+            }
+            break;
+        case &#x27;Opera&#x27;:
+            if (this._Versions.Opera.test(string)) {
+                return RegExp.$1 ? RegExp.$1: RegExp.$2;
+            }
+            break;
+        case &#x27;Firefox&#x27;:
+            if (this._Versions.Firefox.test(string)) {
+                return RegExp.$1;
+            }
+            break;
+        case &#x27;WinJs&#x27;:
+            if (this._Versions.WinJs.test(string)) {
+                return RegExp.$1;
+            }
+            break;
+        case &#x27;IE&#x27;:
+            if (this._Versions.IE.test(string)) {
+                return RegExp.$2 ? RegExp.$2 : RegExp.$1;
+            }
+            break;
+        case &#x27;ps3&#x27;:
+            if (this._Versions.Ps3.test(string)) {
+                return RegExp.$1;
+            }
+            break;
+        case &#x27;psp&#x27;:
+            if (this._Versions.Psp.test(string)) {
+                return RegExp.$1;
+            }
+            break;
+        case &#x27;Amaya&#x27;:
+            if (this._Versions.Amaya.test(string)) {
+                return RegExp.$1;
+            }
+            break;
+        case &#x27;Epiphany&#x27;:
+            if (this._Versions.Epiphany.test(string)) {
+                return RegExp.$1;
+            }
+            break;
+        case &#x27;SeaMonkey&#x27;:
+            if (this._Versions.SeaMonkey.test(string)) {
+                return RegExp.$1;
+            }
+            break;
+        case &#x27;Flock&#x27;:
+            if (this._Versions.Flock.test(string)) {
+                return RegExp.$1;
+            }
+            break;
+        case &#x27;OmniWeb&#x27;:
+            if (this._Versions.OmniWeb.test(string)) {
+                return RegExp.$1;
+            }
+            break;
+        case &#x27;UCBrowser&#x27;:
+            if (this._Versions.UC.test(string)) {
+                return RegExp.$1;
+            }
+            break;
+        default:
+            if (this.Agent.browser !== &#x27;unknown&#x27;) {
+                regex = new RegExp(this.Agent.browser + &#x27;[\\/ ]([\\d\\w\\.\\-]+)&#x27;, &#x27;i&#x27;);
+                if (regex.test(string)) {
+                    return RegExp.$1;
+                }
+            }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (typeof source === &#x27;undefined&#x27;) {
+    source = &#x22;unknown&#x22;;
+}
+ua.Agent.source = source.replace(/^\s*/, &#x27;&#x27;).replace(/\s*$/, &#x27;&#x27;);
+ua.Agent.os = ua.getOS(ua.Agent.source);
+ua.Agent.platform = ua.getPlatform(ua.Agent.source);
+ua.Agent.browser = ua.getBrowser(ua.Agent.source);
+ua.Agent.version = ua.<span class="apidocCodeKeywordSpan">getBrowserVersion</span>(ua.Agent.source);
+ua.testNginxGeoIP(req.headers);
+ua.testBot();
+ua.testMobile();
+ua.testAndroidTablet();
+ua.testTablet();
+ua.testCompatibilityMode();
+ua.testSilk();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-useragent.getOS" id="apidoc.element.express-useragent.getOS">
+        function <span class="apidocSignatureSpan">express-useragent.</span>getOS
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getOS = function (string) {
+    switch (true) {
+        case this._OS.WindowsVista.test(string):
+            this.Agent.isWindows = true;
+            return &#x27;Windows Vista&#x27;;
+        case this._OS.Windows7.test(string):
+            this.Agent.isWindows = true;
+            return &#x27;Windows 7&#x27;;
+        case this._OS.Windows8.test(string):
+            this.Agent.isWindows = true;
+            return &#x27;Windows 8&#x27;;
+        case this._OS.Windows81.test(string):
+            this.Agent.isWindows = true;
+            return &#x27;Windows 8.1&#x27;;
+        case this._OS.Windows10.test(string):
+            this.Agent.isWindows = true;
+            return &#x27;Windows 10.0&#x27;;
+        case this._OS.Windows2003.test(string):
+            this.Agent.isWindows = true;
+            return &#x27;Windows 2003&#x27;;
+        case this._OS.WindowsXP.test(string):
+            this.Agent.isWindows = true;
+            return &#x27;Windows XP&#x27;;
+        case this._OS.Windows2000.test(string):
+            this.Agent.isWindows = true;
+            return &#x27;Windows 2000&#x27;;
+        case this._OS.WindowsPhone81.test(string):
+            this.Agent.isWindowsPhone = true;
+            return &#x27;Windows Phone 8.1&#x27;;
+        case this._OS.WindowsPhone80.test(string):
+            this.Agent.isWindowsPhone = true;
+            return &#x27;Windows Phone 8.0&#x27;;
+        case this._OS.Linux64.test(string):
+            this.Agent.isLinux = true;
+            this.Agent.isLinux64 = true;
+            return &#x27;Linux 64&#x27;;
+        case this._OS.Linux.test(string):
+            this.Agent.isLinux = true;
+            return &#x27;Linux&#x27;;
+        case this._OS.ChromeOS.test(string):
+            this.Agent.isChromeOS = true;
+            return &#x27;Chrome OS&#x27;;
+        case this._OS.Wii.test(string):
+            return &#x27;Wii&#x27;;
+        case this._OS.PS3.test(string):
+            return &#x27;Playstation&#x27;;
+        case this._OS.PSP.test(string):
+            return &#x27;Playstation&#x27;;
+        case this._OS.OSXCheetah.test(string):
+            this.Agent.isMac = true;
+            return &#x27;OS X Cheetah&#x27;;
+        case this._OS.OSXPuma.test(string):
+            this.Agent.isMac = true;
+            return &#x27;OS X Puma&#x27;;
+        case this._OS.OSXJaguar.test(string):
+            this.Agent.isMac = true;
+            return &#x27;OS X Jaguar&#x27;;
+        case this._OS.OSXPanther.test(string):
+            this.Agent.isMac = true;
+            return &#x27;OS X Panther&#x27;;
+        case this._OS.OSXTiger.test(string):
+            this.Agent.isMac = true;
+            return &#x27;OS X Tiger&#x27;;
+        case this._OS.OSXLeopard.test(string):
+            this.Agent.isMac = true;
+            return &#x27;OS X Leopard&#x27;;
+        case this._OS.OSXSnowLeopard.test(string):
+            this.Agent.isMac = true;
+            return &#x27;OS X Snow Leopard&#x27;;
+        case this._OS.OSXLion.test(string):
+            this.Agent.isMac = true;
+            return &#x27;OS X Lion&#x27;;
+        case this._OS.OSXMountainLion.test(string):
+            this.Agent.isMac = true;
+            return &#x27;OS X Mountain Lion&#x27;;
+        case this._OS.OSXMavericks.test(string):
+            this.Agent.isMac = true;
+            return &#x27;OS X Mavericks&#x27;;
+        case this._OS.OSXYosemite.test(string):
+            this.Agent.isMac = true;
+            return &#x27;OS X Yosemite&#x27;;
+        case this._OS.OSXElCapitan.test(string):
+            this.Agent.isMac = true;
+            return &#x27;OS X El Capitan&#x27;;
+        case this._OS.OSXSierra.test(string):
+            this.Agent.isMac = true;
+            return &#x27;macOS Sierra&#x27;;
+        case this._OS.Mac.test(string):
+            this.Agent.isMac = true;
+            return &#x27;OS X&#x27;;
+        case this._OS.iPad.test(string):
+            this.Agent.isiPad = true;
+            return string.match(this._OS.iPad)[0].replace(&#x27;_&#x27;, &#x27;.&#x27;);
+        case this._OS.iPhone.test(string):
+            this.Agent.isiPhone = true;
+            return string.match(this._OS.iPhone)[0].replace(&#x27;_&#x27;, &#x27;.&#x27;);
+        case this._OS.Bada.test(string):
+            this.Agent.isBada = true;
+            return &#x27;Bada&#x27;;
+        case this._OS.Curl.test(string):
+            this.Agent.isCurl = true;
+            return &#x27;Curl&#x27;;
+        default:
+            return ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    source = req.headers[&#x27;x-ucbrowser-ua&#x27;];
+}
+var ua = new UserAgent();
+if (typeof source === &#x27;undefined&#x27;) {
+    source = &#x22;unknown&#x22;;
+}
+ua.Agent.source = source.replace(/^\s*/, &#x27;&#x27;).replace(/\s*$/, &#x27;&#x27;);
+ua.Agent.os = ua.<span class="apidocCodeKeywordSpan">getOS</span>(ua.Agent.source);
+ua.Agent.platform = ua.getPlatform(ua.Agent.source);
+ua.Agent.browser = ua.getBrowser(ua.Agent.source);
+ua.Agent.version = ua.getBrowserVersion(ua.Agent.source);
+ua.testNginxGeoIP(req.headers);
+ua.testBot();
+ua.testMobile();
+ua.testAndroidTablet();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-useragent.getPlatform" id="apidoc.element.express-useragent.getPlatform">
+        function <span class="apidocSignatureSpan">express-useragent.</span>getPlatform
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPlatform = function (string) {
+    switch (true) {
+        case this._Platform.Windows.test(string):
+            return &#x27;Microsoft Windows&#x27;;
+        case this._Platform.WindowsPhone.test(string):
+            this.Agent.isWindowsPhone = true;
+            return &#x27;Microsoft Windows Phone&#x27;;
+        case this._Platform.Mac.test(string):
+            return &#x27;Apple Mac&#x27;;
+        case this._Platform.Curl.test(string):
+            return &#x27;Curl&#x27;;
+        case this._Platform.Android.test(string):
+            this.Agent.isAndroid = true;
+            return &#x27;Android&#x27;;
+        case this._Platform.Blackberry.test(string):
+            this.Agent.isBlackberry = true;
+            return &#x27;Blackberry&#x27;;
+        case this._Platform.Linux.test(string):
+            return &#x27;Linux&#x27;;
+        case this._Platform.Wii.test(string):
+            return &#x27;Wii&#x27;;
+        case this._Platform.Playstation.test(string):
+            return &#x27;Playstation&#x27;;
+        case this._Platform.iPad.test(string):
+            this.Agent.isiPad = true;
+            return &#x27;iPad&#x27;;
+        case this._Platform.iPod.test(string):
+            this.Agent.isiPod = true;
+            return &#x27;iPod&#x27;;
+        case this._Platform.iPhone.test(string):
+            this.Agent.isiPhone = true;
+            return &#x27;iPhone&#x27;;
+        case this._Platform.Samsung.test(string):
+            this.Agent.isiSamsung = true;
+            return &#x27;Samsung&#x27;;
+        default:
+            return &#x27;unknown&#x27;;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+var ua = new UserAgent();
+if (typeof source === &#x27;undefined&#x27;) {
+    source = &#x22;unknown&#x22;;
+}
+ua.Agent.source = source.replace(/^\s*/, &#x27;&#x27;).replace(/\s*$/, &#x27;&#x27;);
+ua.Agent.os = ua.getOS(ua.Agent.source);
+ua.Agent.platform = ua.<span class="apidocCodeKeywordSpan">getPlatform</span>(ua.Agent.source);
+ua.Agent.browser = ua.getBrowser(ua.Agent.source);
+ua.Agent.version = ua.getBrowserVersion(ua.Agent.source);
+ua.testNginxGeoIP(req.headers);
+ua.testBot();
+ua.testMobile();
+ua.testAndroidTablet();
+ua.testTablet();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-useragent.parse" id="apidoc.element.express-useragent.parse">
+        function <span class="apidocSignatureSpan">express-useragent.</span>parse
+        <span class="apidocSignatureSpan">(source)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(source) {
+    var ua = new UserAgent();
+    ua.Agent.source = source.replace(/^\s*/, &#x27;&#x27;).replace(/\s*$/, &#x27;&#x27;);
+    ua.Agent.os = ua.getOS(ua.Agent.source);
+    ua.Agent.platform = ua.getPlatform(ua.Agent.source);
+    ua.Agent.browser = ua.getBrowser(ua.Agent.source);
+    ua.Agent.version = ua.getBrowserVersion(ua.Agent.source);
+    ua.testBot();
+    ua.testSmartTV();
+    ua.testMobile();
+    ua.testAndroidTablet();
+    ua.testTablet();
+    ua.testCompatibilityMode();
+    ua.testSilk();
+    ua.testKindleFire();
+    ua.testCaptiveNetwork();
+    return ua.Agent;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```js
+var http = require(&#x27;http&#x27;)
+  , useragent = require(&#x27;express-useragent&#x27;);
+
+var srv = http.createServer(function (req, res) {
+  var source = req.headers[&#x27;user-agent&#x27;],
+  ua = useragent.<span class="apidocCodeKeywordSpan">parse</span>(source);
+  res.writeHead(200, {&#x27;Content-Type&#x27;: &#x27;text/plain&#x27;});
+  res.end(JSON.stringify(ua));
+});
+
+srv.listen(3000);
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-useragent.reset" id="apidoc.element.express-useragent.reset">
+        function <span class="apidocSignatureSpan">express-useragent.</span>reset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reset() {
+    var ua = this;
+    for (var key in ua.DefaultAgent) {
+        ua.Agent[key] = ua.DefaultAgent[key];
+    }
+    return ua;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-useragent.testAndroidTablet" id="apidoc.element.express-useragent.testAndroidTablet">
+        function <span class="apidocSignatureSpan">express-useragent.</span>testAndroidTablet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function testAndroidTablet() {
+    var ua = this;
+    if (ua.Agent.isAndroid &#x26;&#x26; !/mobile/i.test(ua.Agent.source)) {
+        ua.Agent.isAndroidTablet = true;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ua.Agent.os = ua.getOS(ua.Agent.source);
+ua.Agent.platform = ua.getPlatform(ua.Agent.source);
+ua.Agent.browser = ua.getBrowser(ua.Agent.source);
+ua.Agent.version = ua.getBrowserVersion(ua.Agent.source);
+ua.testNginxGeoIP(req.headers);
+ua.testBot();
+ua.testMobile();
+ua.<span class="apidocCodeKeywordSpan">testAndroidTablet</span>();
+ua.testTablet();
+ua.testCompatibilityMode();
+ua.testSilk();
+ua.testKindleFire();
+req.useragent = ua.Agent;
+if (&#x27;function&#x27; === typeof res.locals) {
+    res.locals({useragent: ua.Agent});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-useragent.testBot" id="apidoc.element.express-useragent.testBot">
+        function <span class="apidocSignatureSpan">express-useragent.</span>testBot
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function testBot() {
+    var ua = this;
+    var isBot = IS_BOT_REGEXP.exec(ua.Agent.source.toLowerCase());
+    if (isBot) {
+        ua.Agent.isBot = isBot[1];
+    } else if (!ua.Agent.isAuthoritative) {
+        // Test unauthoritative parse for `bot` in UA to flag for bot
+        ua.Agent.isBot = /bot/i.test(ua.Agent.source);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+ua.Agent.source = source.replace(/^\s*/, &#x27;&#x27;).replace(/\s*$/, &#x27;&#x27;);
+ua.Agent.os = ua.getOS(ua.Agent.source);
+ua.Agent.platform = ua.getPlatform(ua.Agent.source);
+ua.Agent.browser = ua.getBrowser(ua.Agent.source);
+ua.Agent.version = ua.getBrowserVersion(ua.Agent.source);
+ua.testNginxGeoIP(req.headers);
+ua.<span class="apidocCodeKeywordSpan">testBot</span>();
+ua.testMobile();
+ua.testAndroidTablet();
+ua.testTablet();
+ua.testCompatibilityMode();
+ua.testSilk();
+ua.testKindleFire();
+req.useragent = ua.Agent;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-useragent.testCaptiveNetwork" id="apidoc.element.express-useragent.testCaptiveNetwork">
+        function <span class="apidocSignatureSpan">express-useragent.</span>testCaptiveNetwork
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">testCaptiveNetwork = function () {
+    var ua = this;
+    switch (true) {
+        case /CaptiveNetwork/gi.test(ua.Agent.source):
+            ua.Agent.isCaptive = true;
+            ua.Agent.isMac = true;
+            ua.Agent.platform = &#x27;Apple Mac&#x27;;
+            return &#x27;CaptiveNetwork&#x27;;
+        default:
+            return false;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        ua.testSmartTV();
+        ua.testMobile();
+        ua.testAndroidTablet();
+        ua.testTablet();
+        ua.testCompatibilityMode();
+        ua.testSilk();
+        ua.testKindleFire();
+        ua.<span class="apidocCodeKeywordSpan">testCaptiveNetwork</span>();
+        return ua.Agent;
+    };
+
+    this.Agent = this.DefaultAgent;
+    return this;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-useragent.testCompatibilityMode" id="apidoc.element.express-useragent.testCompatibilityMode">
+        function <span class="apidocSignatureSpan">express-useragent.</span>testCompatibilityMode
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">testCompatibilityMode = function () {
+    var ua = this;
+    if (this.Agent.isIE) {
+        if (/Trident\/(\d)\.0/i.test(ua.Agent.source)) {
+            var tridentVersion = parseInt(RegExp.$1, 10);
+            var version = parseInt(ua.Agent.version, 10);
+            if (version === 7 &#x26;&#x26; tridentVersion === 7) {
+                ua.Agent.isIECompatibilityMode = true;
+                ua.Agent.version = 11.0;
+            }
+
+            if (version === 7 &#x26;&#x26; tridentVersion === 6) {
+                ua.Agent.isIECompatibilityMode = true;
+                ua.Agent.version = 10.0;
+            }
+
+            if (version === 7 &#x26;&#x26; tridentVersion === 5) {
+                ua.Agent.isIECompatibilityMode = true;
+                ua.Agent.version = 9.0;
+            }
+
+            if (version === 7 &#x26;&#x26; tridentVersion === 4) {
+                ua.Agent.isIECompatibilityMode = true;
+                ua.Agent.version = 8.0;
+            }
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ua.Agent.browser = ua.getBrowser(ua.Agent.source);
+ua.Agent.version = ua.getBrowserVersion(ua.Agent.source);
+ua.testNginxGeoIP(req.headers);
+ua.testBot();
+ua.testMobile();
+ua.testAndroidTablet();
+ua.testTablet();
+ua.<span class="apidocCodeKeywordSpan">testCompatibilityMode</span>();
+ua.testSilk();
+ua.testKindleFire();
+req.useragent = ua.Agent;
+if (&#x27;function&#x27; === typeof res.locals) {
+    res.locals({useragent: ua.Agent});
+} else {
+    res.locals.useragent = ua.Agent;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-useragent.testKindleFire" id="apidoc.element.express-useragent.testKindleFire">
+        function <span class="apidocSignatureSpan">express-useragent.</span>testKindleFire
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">testKindleFire = function () {
+    var ua = this;
+    switch (true) {
+        case /KFOT/gi.test(ua.Agent.source):
+            this.Agent.isKindleFire = true;
+            return &#x27;Kindle Fire&#x27;;
+        case /KFTT/gi.test(ua.Agent.source):
+            this.Agent.isKindleFire = true;
+            return &#x27;Kindle Fire HD&#x27;;
+        case /KFJWI/gi.test(ua.Agent.source):
+            this.Agent.isKindleFire = true;
+            return &#x27;Kindle Fire HD 8.9&#x27;;
+        case /KFJWA/gi.test(ua.Agent.source):
+            this.Agent.isKindleFire = true;
+            return &#x27;Kindle Fire HD 8.9 4G&#x27;;
+        case /KFSOWI/gi.test(ua.Agent.source):
+            this.Agent.isKindleFire = true;
+            return &#x27;Kindle Fire HD 7&#x27;;
+        case /KFTHWI/gi.test(ua.Agent.source):
+            this.Agent.isKindleFire = true;
+            return &#x27;Kindle Fire HDX 7&#x27;;
+        case /KFTHWA/gi.test(ua.Agent.source):
+            this.Agent.isKindleFire = true;
+            return &#x27;Kindle Fire HDX 7 4G&#x27;;
+        case /KFAPWI/gi.test(ua.Agent.source):
+            this.Agent.isKindleFire = true;
+            return &#x27;Kindle Fire HDX 8.9&#x27;;
+        case /KFAPWA/gi.test(ua.Agent.source):
+            this.Agent.isKindleFire = true;
+            return &#x27;Kindle Fire HDX 8.9 4G&#x27;;
+        default:
+            return false;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ua.testNginxGeoIP(req.headers);
+ua.testBot();
+ua.testMobile();
+ua.testAndroidTablet();
+ua.testTablet();
+ua.testCompatibilityMode();
+ua.testSilk();
+ua.<span class="apidocCodeKeywordSpan">testKindleFire</span>();
+req.useragent = ua.Agent;
+if (&#x27;function&#x27; === typeof res.locals) {
+    res.locals({useragent: ua.Agent});
+} else {
+    res.locals.useragent = ua.Agent;
+}
+next();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-useragent.testMobile" id="apidoc.element.express-useragent.testMobile">
+        function <span class="apidocSignatureSpan">express-useragent.</span>testMobile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function testMobile() {
+    var ua = this;
+    switch (true) {
+        case ua.Agent.isWindows:
+        case ua.Agent.isLinux:
+        case ua.Agent.isMac:
+        case ua.Agent.isChromeOS:
+            ua.Agent.isDesktop = true;
+            break;
+        case ua.Agent.isAndroid:
+        case ua.Agent.isSamsung:
+            ua.Agent.isMobile = true;
+            ua.Agent.isDesktop = false;
+            break;
+        default:
+    }
+    switch (true) {
+        case ua.Agent.isiPad:
+        case ua.Agent.isiPod:
+        case ua.Agent.isiPhone:
+        case ua.Agent.isBada:
+        case ua.Agent.isBlackberry:
+        case ua.Agent.isAndroid:
+        case ua.Agent.isWindowsPhone:
+            ua.Agent.isMobile = true;
+            ua.Agent.isDesktop = false;
+            break;
+        default:
+    }
+    if (/mobile/i.test(ua.Agent.source)) {
+        ua.Agent.isMobile = true;
+        ua.Agent.isDesktop = false;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ua.Agent.source = source.replace(/^\s*/, &#x27;&#x27;).replace(/\s*$/, &#x27;&#x27;);
+ua.Agent.os = ua.getOS(ua.Agent.source);
+ua.Agent.platform = ua.getPlatform(ua.Agent.source);
+ua.Agent.browser = ua.getBrowser(ua.Agent.source);
+ua.Agent.version = ua.getBrowserVersion(ua.Agent.source);
+ua.testNginxGeoIP(req.headers);
+ua.testBot();
+ua.<span class="apidocCodeKeywordSpan">testMobile</span>();
+ua.testAndroidTablet();
+ua.testTablet();
+ua.testCompatibilityMode();
+ua.testSilk();
+ua.testKindleFire();
+req.useragent = ua.Agent;
+if (&#x27;function&#x27; === typeof res.locals) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-useragent.testNginxGeoIP" id="apidoc.element.express-useragent.testNginxGeoIP">
+        function <span class="apidocSignatureSpan">express-useragent.</span>testNginxGeoIP
+        <span class="apidocSignatureSpan">(headers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function testNginxGeoIP(headers) {
+    var ua = this;
+    Object.keys(headers).forEach(function (key) {
+        if (/^GEOIP/i.test(key)) {
+            ua.Agent.geoIp[key] = headers[key];
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    source = &#x22;unknown&#x22;;
+}
+ua.Agent.source = source.replace(/^\s*/, &#x27;&#x27;).replace(/\s*$/, &#x27;&#x27;);
+ua.Agent.os = ua.getOS(ua.Agent.source);
+ua.Agent.platform = ua.getPlatform(ua.Agent.source);
+ua.Agent.browser = ua.getBrowser(ua.Agent.source);
+ua.Agent.version = ua.getBrowserVersion(ua.Agent.source);
+ua.<span class="apidocCodeKeywordSpan">testNginxGeoIP</span>(req.headers);
+ua.testBot();
+ua.testMobile();
+ua.testAndroidTablet();
+ua.testTablet();
+ua.testCompatibilityMode();
+ua.testSilk();
+ua.testKindleFire();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-useragent.testSilk" id="apidoc.element.express-useragent.testSilk">
+        function <span class="apidocSignatureSpan">express-useragent.</span>testSilk
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">testSilk = function () {
+    var ua = this;
+    switch (true) {
+        case new RegExp(&#x27;silk&#x27;, &#x27;gi&#x27;).test(ua.Agent.source):
+            this.Agent.isSilk = true;
+            break;
+        default:
+    }
+
+    if (/Silk-Accelerated=true/gi.test(ua.Agent.source)) {
+    this.Agent.SilkAccelerated = true;
+    }
+    return this.Agent.isSilk ? &#x27;Silk&#x27; : false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ua.Agent.version = ua.getBrowserVersion(ua.Agent.source);
+ua.testNginxGeoIP(req.headers);
+ua.testBot();
+ua.testMobile();
+ua.testAndroidTablet();
+ua.testTablet();
+ua.testCompatibilityMode();
+ua.<span class="apidocCodeKeywordSpan">testSilk</span>();
+ua.testKindleFire();
+req.useragent = ua.Agent;
+if (&#x27;function&#x27; === typeof res.locals) {
+    res.locals({useragent: ua.Agent});
+} else {
+    res.locals.useragent = ua.Agent;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-useragent.testSmartTV" id="apidoc.element.express-useragent.testSmartTV">
+        function <span class="apidocSignatureSpan">express-useragent.</span>testSmartTV
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function testBot() {
+    var ua = this;
+    var isSmartTV = new RegExp(&#x27;smart-tv|smarttv|googletv|appletv|hbbtv|pov_tv|netcast.tv&#x27;,&#x27;gi&#x27;).exec(ua.Agent.source.toLowerCase
+());
+    if (isSmartTV) {
+        ua.Agent.isSmartTV = isSmartTV[1];
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var ua = new UserAgent();
+ua.Agent.source = source.replace(/^\s*/, &#x27;&#x27;).replace(/\s*$/, &#x27;&#x27;);
+ua.Agent.os = ua.getOS(ua.Agent.source);
+ua.Agent.platform = ua.getPlatform(ua.Agent.source);
+ua.Agent.browser = ua.getBrowser(ua.Agent.source);
+ua.Agent.version = ua.getBrowserVersion(ua.Agent.source);
+ua.testBot();
+ua.<span class="apidocCodeKeywordSpan">testSmartTV</span>();
+ua.testMobile();
+ua.testAndroidTablet();
+ua.testTablet();
+ua.testCompatibilityMode();
+ua.testSilk();
+ua.testKindleFire();
+ua.testCaptiveNetwork();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.express-useragent.testTablet" id="apidoc.element.express-useragent.testTablet">
+        function <span class="apidocSignatureSpan">express-useragent.</span>testTablet
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function testTablet() {
+    var ua = this;
+    switch (true) {
+        case ua.Agent.isiPad:
+        case ua.Agent.isAndroidTablet:
+        case ua.Agent.isKindleFire:
+            ua.Agent.isTablet = true;
+            break;
+    }
+    if (/tablet/i.test(ua.Agent.source)) {
+        ua.Agent.isTablet = true;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ua.Agent.platform = ua.getPlatform(ua.Agent.source);
+ua.Agent.browser = ua.getBrowser(ua.Agent.source);
+ua.Agent.version = ua.getBrowserVersion(ua.Agent.source);
+ua.testNginxGeoIP(req.headers);
+ua.testBot();
+ua.testMobile();
+ua.testAndroidTablet();
+ua.<span class="apidocCodeKeywordSpan">testTablet</span>();
+ua.testCompatibilityMode();
+ua.testSilk();
+ua.testKindleFire();
+req.useragent = ua.Agent;
+if (&#x27;function&#x27; === typeof res.locals) {
+    res.locals({useragent: ua.Agent});
+} else {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.express-useragent.express_useragent" id="apidoc.module.express-useragent.express_useragent">module express-useragent.express_useragent</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.express-useragent.express_useragent.UserAgent" id="apidoc.element.express-useragent.express_useragent.UserAgent">
+        function <span class="apidocSignatureSpan">express-useragent.express_useragent.</span>UserAgent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">UserAgent = function () {
+    this.version = &#x27;1.0.4&#x27;;
+    this._Versions = {
+        Edge: /Edge\/([\d\w\.\-]+)/i,
+        Firefox: /firefox\/([\d\w\.\-]+)/i,
+        IE: /msie\s([\d\.]+[\d])|trident\/\d+\.\d+;.*[rv:]+(\d+\.\d)/i,
+        Chrome: /chrome\/([\d\w\.\-]+)/i,
+        Chromium: /(?:chromium|crios)\/([\d\w\.\-]+)/i,
+        Safari: /version\/([\d\w\.\-]+)/i,
+        Opera: /version\/([\d\w\.\-]+)|OPR\/([\d\w\.\-]+)/i,
+        Ps3: /([\d\w\.\-]+)\)\s*$/i,
+        Psp: /([\d\w\.\-]+)\)?\s*$/i,
+        Amaya: /amaya\/([\d\w\.\-]+)/i,
+        SeaMonkey: /seamonkey\/([\d\w\.\-]+)/i,
+        OmniWeb: /omniweb\/v([\d\w\.\-]+)/i,
+        Flock: /flock\/([\d\w\.\-]+)/i,
+        Epiphany: /epiphany\/([\d\w\.\-]+)/i,
+        WinJs: /msapphost\/([\d\w\.\-]+)/i,
+        PhantomJS: /phantomjs\/([\d\w\.\-]+)/i,
+        UC: /UCBrowser\/([\d\w\.]+)/i
+    };
+    this._Browsers = {
+        Edge: /edge/i,
+        Amaya: /amaya/i,
+        Konqueror: /konqueror/i,
+        Epiphany: /epiphany/i,
+        SeaMonkey: /seamonkey/i,
+        Flock: /flock/i,
+        OmniWeb: /omniweb/i,
+        Chromium: /chromium|crios/i,
+        Chrome: /chrome/i,
+        Safari: /safari/i,
+        IE: /msie|trident/i,
+        Opera: /opera|OPR/i,
+        PS3: /playstation 3/i,
+        PSP: /playstation portable/i,
+        Firefox: /firefox/i,
+        WinJs: /msapphost/i,
+        PhantomJS: /phantomjs/i,
+        UC: /UCBrowser/i
+    };
+    this._OS = {
+        Windows10: /windows nt 10\.0/i,
+        Windows81: /windows nt 6\.3/i,
+        Windows8: /windows nt 6\.2/i,
+        Windows7: /windows nt 6\.1/i,
+        UnknownWindows: /windows nt 6\.\d+/i,
+        WindowsVista: /windows nt 6\.0/i,
+        Windows2003: /windows nt 5\.2/i,
+        WindowsXP: /windows nt 5\.1/i,
+        Windows2000: /windows nt 5\.0/i,
+        WindowsPhone81: /windows phone 8\.1/i,
+        WindowsPhone80: /windows phone 8\.0/i,
+        OSXCheetah: /os x 10[._]0/i,
+        OSXPuma: /os x 10[._]1(\D|$)/i,
+        OSXJaguar: /os x 10[._]2/i,
+        OSXPanther: /os x 10[._]3/i,
+        OSXTiger: /os x 10[._]4/i,
+        OSXLeopard: /os x 10[._]5/i,
+        OSXSnowLeopard: /os x 10[._]6/i,
+        OSXLion: /os x 10[._]7/i,
+        OSXMountainLion: /os x 10[._]8/i,
+        OSXMavericks: /os x 10[._]9/i,
+        OSXYosemite: /os x 10[._]10/i,
+        OSXElCapitan: /os x 10[._]11/i,
+        OSXSierra: /os x 10[._]12/i,
+        Mac: /os x/i,
+        Linux: /linux/i,
+        Linux64: /linux x86\_64/i,
+        ChromeOS: /cros/i,
+        Wii: /wii/i,
+        PS3: /playstation 3/i,
+        PSP: /playstation portable/i,
+        iPad: /\(iPad.*os (\d+)[._](\d+)/i,
+        iPhone: /\(iPhone.*os (\d+)[._](\d+)/i,
+        Bada: /Bada\/(\d+)\.(\d+)/i,
+        Curl: /curl\/(\d+)\.(\d+)\.(\d+)/i
+    };
+    this._Platform = {
+        Windows: /windows nt/i,
+        WindowsPhone: /windows phone/i,
+        Mac: /macintosh/i,
+        Linux: /linux/i,
+        Wii: /wii/i,
+        Playstation: /playstation/i,
+        iPad: /ipad/i,
+        iPod: /ipod/i,
+        iPhone: /iphone/i,
+        Android: /android/i,
+        Blackberry: /blackberry/i,
+        Samsung: /samsung/i,
+        Curl: /curl/i
+    };
+
+    this.DefaultAgent = {
+        isAuthoritative: true,
+        isMobile: false,
+        isTablet: false,
+        isiPad: false,
+        isiPod: false,
+        isiPhone: false,
+        isAndroid: false,
+        isBlackberry: false,
+        isOpera: false,
+        isIE: false,
+        isEdge: false,
+        isIECompatibilityMode: false,
+        isSafari: false,
+        isFirefox: false,
+        isWebkit: false,
+        isChrome: false,
+        isKonqueror: false,
+        isOmniWeb: false,
+        isSeaMonkey: false,
+        isFlock: false,
+        isAmaya: false,
+        isPhantomJS: false,
+        isEpiphany: false,
+        isDesktop: false,
+        isWindows: false,
+        isLinux: false,
+        isLinux64: false,
+        isMac: false,
+        isChromeOS: false,
+        isBada: false,
+        isSamsung: false,
+        isRaspberry: false,
+        isBot: false,
+        isCurl: false,
+        isAndroidTablet: false, ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
